@@ -1,0 +1,33 @@
+.faq-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.faq-title {
+  width: 67px;
+  height: 42px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.faq-br {
+  width: 100px;
+  height: 8px;
+  background: #247a50;
+}
+
+.faq-questionList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1460px;
+  margin: auto;
+}

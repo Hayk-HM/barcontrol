@@ -1,0 +1,39 @@
+.testimonials-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials-title {
+  width: 235px;
+  height: 42px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.testimonials-br {
+  width: 100px;
+  height: 8px;
+  background: #247a50;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials-members {
+  margin-top: 40px;
+}
+
+.testimonials-right {
+  margin: auto 10px auto auto;
+  padding: auto;
+}
+
+.testimonials-right {
+  margin: auto 10px auto auto;
+  padding: auto;
+}

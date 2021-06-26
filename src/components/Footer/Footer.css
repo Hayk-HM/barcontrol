@@ -1,0 +1,102 @@
+.footer-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: 432px;
+  background: #247a50;
+}
+
+.footer-information-title {
+  width: 123px;
+  height: 22px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-aboutUs-title {
+  width: 90px;
+  height: 22px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-social-title {
+  width: 227px;
+  height: 22px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-contact {
+  width: 301px;
+  height: 174px;
+}
+
+.footer-information {
+  width: 301px;
+  height: 174px;
+}
+
+.footer-aboutUs {
+  width: 301px;
+  height: 174px;
+}
+
+.footer-social {
+  width: 301px;
+  height: 174px;
+}
+
+.footer-phone,
+.footer-email,
+.footer-domain,
+.footer-location {
+  display: flex;
+  line-height: 180%;
+}
+.footer-info {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 180%;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.footer-information,
+.footer-aboutUs,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  margin-right: 20px;
+}
+
+.footer-information-description,
+.footer-aboutUs-description,
+.footer-social-description {
+  margin: auto 0 auto 0;
+}
+
+a {
+  text-decoration: none;
+}
