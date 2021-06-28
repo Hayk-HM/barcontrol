@@ -4,9 +4,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  margin: 50px auto;
+  margin: 137px auto;
   max-width: 1460px;
-  height: 267px;
+  height: 238px;
   background: #ffffff;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
@@ -21,6 +21,7 @@
   line-height: 140%;
   text-transform: uppercase;
   color: #000000;
+  padding-left: 36px;
 }
 
 .contact-button {
@@ -33,6 +34,8 @@
   font-size: 18px;
   line-height: 140%;
   color: #ffffff;
+  margin-right: 50px;
+  border: none;
 }
 
 .contact-form {
@@ -48,6 +51,7 @@
   line-height: 140%;
   text-align: left;
   color: #000000;
+  padding: 15px;
 }
 
 .contact-left {

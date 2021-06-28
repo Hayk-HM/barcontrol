@@ -15,6 +15,9 @@ const faqReducer = (state = initialState, action) => {
     case 'OPEN_CLOSE':
       return [
         ...state.map(elem => {
+          if (elem.id !== action.id) {
+            elem.isOpen = false
+          }
           if (elem.id === action.id) {
             return {
               ...elem,

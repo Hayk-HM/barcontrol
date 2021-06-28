@@ -4,6 +4,7 @@
   background: #ffffff;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 .members-img {
@@ -24,6 +25,8 @@
   grid-template-areas: ". .";
   padding-top: 10px;
   padding-left: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 .members-description {

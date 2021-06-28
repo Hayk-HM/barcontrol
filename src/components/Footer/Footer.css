@@ -32,7 +32,7 @@
 }
 
 .footer-social-title {
-  width: 227px;
+  width: 230px;
   height: 22px;
   font-family: Montserrat;
   font-style: normal;
@@ -92,9 +92,12 @@
 }
 
 .footer-information-description,
-.footer-aboutUs-description,
-.footer-social-description {
+.footer-aboutUs-description {
   margin: auto 0 auto 0;
+}
+
+.footer-social-description {
+  margin: 9px 0 auto 0;
 }
 
 a {

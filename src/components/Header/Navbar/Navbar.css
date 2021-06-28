@@ -31,6 +31,8 @@ li:hover {
 .nav-item {
   display: flex;
   justify-content: space-around;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
   color: #ffffff;
 }
 
@@ -65,4 +67,5 @@ li:hover {
   text-align: center;
   margin-top: 10px;
   color: #ffffff;
+  border: none;
 }
