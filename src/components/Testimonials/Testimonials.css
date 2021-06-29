@@ -33,7 +33,11 @@
   padding: auto;
 }
 
-.testimonials-right {
+.testimonials-left {
   margin: auto 10px auto auto;
   padding: auto;
+}
+
+.left-arrow {
+  margin: auto 20px auto auto;
 }

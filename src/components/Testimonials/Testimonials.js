@@ -24,7 +24,7 @@ const Testimonials = () => {
       </div>
       <div className='testimonials-members'>
         <div className='testimonials-list'>
-          <div className='testimonials-right'><img src={left} alt='left' /></div>
+          <div className='testimonials-left'><img className='left-arrow' src={left} alt='left' /></div>
           {
             testimonials.members.map(elem => <Members
               memberPhoto={elem.image}
