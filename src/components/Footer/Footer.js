@@ -40,7 +40,7 @@ const Footer = () => {
         <div className='footer-social-title'>Find Us on social media</div>
         <div className='footer-social-description footer-info'>
           {
-            footer.social.map(elem => (elem === 'facebook') ? <a href='https://www.facebook.com/'><FaFacebook className='footer-logo' color='#ffffff' size={32} /> </a> : (elem === 'instagram') ? <a href='https://www.instagram.com/' > <IoLogoInstagram className='footer-logo' size={37} color='#ffffff' /></a> : (elem === 'twitter') ? <a href='https://www.twitter.com/'><AiFillTwitterCircle className='footer-logo' size={37} color='#ffffff' /></a> : null)
+            footer.social.map((elem, index) => (elem === 'facebook') ? <a key={index} href='https://www.facebook.com/'><FaFacebook className='footer-logo' color='#ffffff' size={32} /> </a> : (elem === 'instagram') ? <a href='https://www.instagram.com/' > <IoLogoInstagram className='footer-logo' size={37} color='#ffffff' /></a> : (elem === 'twitter') ? <a href='https://www.twitter.com/'><AiFillTwitterCircle className='footer-logo' size={37} color='#ffffff' /></a> : null)
           }
         </div>
       </div>

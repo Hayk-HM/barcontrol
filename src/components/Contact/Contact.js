@@ -32,7 +32,6 @@ const Contact = () => {
           })
         }
         onSubmit={(values, { resetForm }) => {
-          console.log('Submit', values);
           resetForm()
         }}
       >

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import faqReducer from '../../redux/reducers/faqReducer'
 import './Faq.css'
 import Question from './Question/Question'
 import Aos from 'aos'
@@ -23,7 +22,7 @@ const Faq = () => {
         </div>
         <div className='faq-questionList'>
           {
-            faq.map(elem => <Question id={elem.id} question={elem.question} answer={elem.answer} isOpen={elem.isOpen} />)
+            faq.map((elem, index) => <Question key={index} id={elem.id} question={elem.question} answer={elem.answer} isOpen={elem.isOpen} />)
           }
         </div>
       </div>

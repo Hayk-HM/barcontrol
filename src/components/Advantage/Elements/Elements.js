@@ -1,6 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import FileBase64 from 'react-file-base64';
 
 import './Elements.css'
 

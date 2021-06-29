@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className='main'>
       <div className='photo'>
-        <img src={header.url || photo} alt='photo' className='backPhoto' />
+        <img src={header.url || photo} alt='headerPhoto' className='backPhoto' />
       </div>
       <Navbar />
     </div>

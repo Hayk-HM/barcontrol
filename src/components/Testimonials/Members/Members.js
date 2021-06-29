@@ -17,20 +17,18 @@ const Members = (props) => {
     arr.push('star')
   }
 
-  console.log(arr);
-
   return (
     <div data-aos='zoom-in' className='members-main'>
       <div className='members-info'>
         <div className='members-img'>
-          <img src={props.memberPhoto} alt='member-photo' className='memberPhoto' />
+          <img src={props.memberPhoto} alt='memberPhoto' className='memberPhoto' />
         </div>
         <div className='members-right'>
           <div className='members-fullName'>{props.fullName}</div>
           <div className='members-location'>{props.location}</div>
           <div className='members-rating'>
             {
-              arr.map(elem => <AiFillStar color='#FF8A34' />)
+              arr.map((elem, index) => <AiFillStar key={index} color='#FF8A34' />)
             }
           </div>
         </div>
