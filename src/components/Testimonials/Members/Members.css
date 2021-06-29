@@ -3,8 +3,8 @@
   height: auto;
   background: #ffffff;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
-  margin-right: 10px;
-  margin-top: 10px;
+  margin-right: 29px;
+  margin-top: 29px;
 }
 
 .members-img {
@@ -84,7 +84,7 @@
 .testimonials-list {
   display: flex;
   flex-direction: row;
-  max-width: 1460px;
+  max-width: 1694px;
 }
 
 @media screen and (max-width: 1459px) {
