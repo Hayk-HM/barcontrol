@@ -19,7 +19,7 @@ const Navbar = () => {
           <img src={logo} alt='logo' />
         </div>
         <div className='nav-list'>
-          <ul className={`nav-item ${isOpen ? "" : 'nav-item-mobile'}`}>
+          <ul className={`nav-item ${isOpen ? "notActive" : 'nav-item-mobile'}`}>
             <li><ScrollLink onClick={() => setIsOpen(true)} to='testimonials' smooth={true} duration={1000}>Testimonials</ScrollLink></li>
             <li><ScrollLink onClick={() => setIsOpen(true)} to='adventages' smooth={true} duration={1000}>Adventages</ScrollLink></li>
             <li><ScrollLink onClick={() => setIsOpen(true)} to='faq' smooth={true} duration={1000}>FAQ</ScrollLink></li>
