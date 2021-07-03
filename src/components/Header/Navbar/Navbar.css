@@ -69,3 +69,79 @@ li:hover {
   color: #ffffff;
   border: none;
 }
+
+@media screen and (max-width: 900px) {
+  .nav-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-item-mobile {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    background-color: rgb(189, 169, 169);
+    padding-top: 20px;
+    padding-right: 20px;
+    height: 100%;
+    /* animation-name: example;
+    animation-duration: 0.5s; */
+  }
+
+  /* @keyframes example {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0;
+    }
+  } */
+
+  .nav-item li {
+    margin: 10px 0 20px 0;
+    text-align: end;
+  }
+}
+
+.nav-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-menu:hover {
+  color: #247a50;
+}
+
+@media screen and (max-width: 900px) {
+  .nav-menu {
+    display: block;
+    color: #ffffff;
+    z-index: 1;
+    margin-right: 20px;
+  }
+}
+
+.nav-closeMenu {
+  height: 40px;
+  display: none;
+  padding: auto;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .nav-closeMenu {
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+    color: #ffffff;
+  }
+}
+
+.nav-closeMenu:hover {
+  color: #247a50;
+}
