@@ -1,10 +1,26 @@
 li {
+  font-family: Montserrat, sans-serif;
   list-style: none;
   cursor: pointer;
 }
 
+.nav-item-mobile li {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 180%;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
 li:hover {
   color: #247a50;
+}
+
+.nav-logo {
+  width: 200px;
+  z-index: 2;
 }
 
 .header {
@@ -20,7 +36,7 @@ li:hover {
 .navbar {
   display: flex;
   justify-content: space-around;
-  padding-top: 30px;
+  padding: 30px 20px 0 20px;
 }
 
 .nav-list {
@@ -72,59 +88,30 @@ li:hover {
 
 @media screen and (max-width: 900px) {
   .nav-item {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 50px;
+    left: -200%;
+    opacity: 1;
+    transition: all 1s ease;
   }
 }
 
 @media screen and (max-width: 900px) {
   .nav-item-mobile {
-    position: absolute;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    background-color: rgb(189, 169, 169);
-    padding-top: 20px;
-    padding-right: 20px;
-    height: 100%;
-    animation-name: example;
-    animation-duration: 0.5s;
+    background: #6668f4;
+    left: 0;
+    opacity: 1;
+    transition: all 1s ease;
+    z-index: 1;
   }
 
-  @keyframes example {
-    0% {
-      right: -100%;
-    }
-    100% {
-      right: 0;
-    }
-  }
-
-  .notActive {
-    position: absolute;
-    right: -100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    background-color: rgb(189, 169, 169);
-    padding-top: 20px;
-    padding-right: 20px;
-    height: 100%;
-    animation-name: actives;
-    animation-duration: 1s;
-  }
-
-  @keyframes actives {
-    0% {
-      right: 0;
-    }
-    100% {
-      right: -100%;
-    }
+  .nav-item-mobile.noActive {
+    display: none;
+    transition: all 1s ease;
   }
 
   .nav-item li {
@@ -137,6 +124,7 @@ li:hover {
 .nav-menu {
   display: none;
   cursor: pointer;
+  width: 60px;
 }
 
 .nav-menu:hover {
@@ -154,6 +142,7 @@ li:hover {
 
 .nav-closeMenu {
   height: 40px;
+  width: 60px;
   display: none;
   padding: auto;
   margin-right: 20px;
