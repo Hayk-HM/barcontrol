@@ -1,16 +1,16 @@
 .members-main {
-  width: 470px;
+  max-width: 470px;
   height: auto;
   background: #ffffff;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
-  margin-right: 29px;
-  margin-top: 29px;
+  margin: 0 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .members-img {
   width: 88px;
   height: 88px;
-  background: rgba(0, 0, 0, 0.31);
 }
 
 .memberPhoto {
@@ -66,14 +66,14 @@
 }
 
 .members-text {
-  width: 343px;
-  height: 134px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 140%;
   color: #211f1f;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .members-right {
@@ -87,7 +87,7 @@
   max-width: 1694px;
 }
 
-@media screen and (max-width: 1459px) {
+@media screen and (max-width: 1100px) {
   .testimonials-list {
     display: flex;
     flex-direction: column;

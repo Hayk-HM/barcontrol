@@ -18,13 +18,13 @@ const Testimonials = () => {
 
   return (
     <div className='testimonials-main' id="testimonials">
-      <div className='testimonials-left'>
+      <div>
         <div data-aos='slide-up' className='testimonials-title'>{testimonials.testimonialsTitle}</div>
         <div data-aos='slide-up' className='testimonials-br'></div>
       </div>
       <div className='testimonials-members'>
+        <div className='testimonials-left'><img className='left-arrow' src={left} alt='left' /></div>
         <div className='testimonials-list'>
-          <div className='testimonials-left'><img className='left-arrow' src={left} alt='left' /></div>
           {
             testimonials.members.map((elem, index) => <Members
               key={index}
@@ -35,8 +35,8 @@ const Testimonials = () => {
               description={elem.description}
             />)
           }
-          <div className='testimonials-right'><img src={right} alt='right' /></div>
         </div>
+        <div className='testimonials-right'><img src={right} alt='right' /></div>
       </div>
     </div>
   )

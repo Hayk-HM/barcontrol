@@ -4,6 +4,19 @@
   align-items: center;
 }
 
+.testimonials-list {
+  margin: 0 10px;
+}
+
+.testimonials-members {
+  display: grid;
+  grid-template-columns: 0.3fr 6.4fr 0.3fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . .";
+  margin-top: 40px;
+}
+
 .testimonials-title {
   width: 235px;
   height: 42px;
@@ -24,18 +37,16 @@
   margin-right: auto;
 }
 
-.testimonials-members {
-  margin-top: 40px;
-}
-
 .testimonials-right {
-  margin: auto 10px auto auto;
-  padding: auto;
+  margin: auto;
+  padding: 0;
+  width: 40px;
 }
 
 .testimonials-left {
-  margin: auto 10px auto auto;
-  padding: auto;
+  padding: 0;
+  margin: auto;
+  width: 40px;
 }
 
 .left-arrow {

@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   width: auto;
-  height: 432px;
+  min-height: 432px;
   background: #247a50;
 }
 
@@ -44,8 +44,8 @@
 }
 
 .footer-contact {
-  width: 301px;
-  height: 174px;
+  min-width: 401px;
+  min-height: 174px;
 }
 
 .footer-information {
@@ -77,7 +77,12 @@
   font-size: 16px;
   line-height: 180%;
   color: #ffffff;
-  margin-left: 10px;
+  max-width: 300px;
+  height: auto;
+}
+
+.footer-location-logo {
+  margin: 0 20px;
 }
 
 .footer-information,
@@ -102,4 +107,14 @@
 
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-contact {
+    margin-top: 10px;
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { GoMail, AiOutlineGlobal, ImLocation2, FaPhoneAlt, FaFacebook, IoLogoInstagram, AiFillTwitterCircle } from 'react-icons/all'
+import { GoMail, AiOutlineGlobal, GoLocation, FaPhoneAlt, FaFacebook, IoLogoInstagram, AiFillTwitterCircle } from 'react-icons/all'
 
 import './Footer.css'
 
@@ -12,19 +12,19 @@ const Footer = () => {
     <div className='footer-main'>
       <div className='footer-contact'>
         <div className='footer-phone'>
-          <div><FaPhoneAlt color='#ffffff' size={16} /></div>
+          <div className='footer-location-logo'><FaPhoneAlt color='#ffffff' size={16} /></div>
           <div className='footer-info'>{footer.phone}</div>
         </div>
         <div className='footer-email'>
-          <div><GoMail color='#ffffff' size={16} /></div>
+          <div className='footer-location-logo'><GoMail color='#ffffff' size={16} /></div>
           <div className='footer-info'>{footer.email}</div>
         </div>
         <div className='footer-domain'>
-          <div><AiOutlineGlobal color='#ffffff' size={16} /></div>
+          <div className='footer-location-logo'><AiOutlineGlobal color='#ffffff' size={16} /></div>
           <div className='footer-info'>{footer.domain}</div>
         </div>
         <div className='footer-location'>
-          <div><ImLocation2 color='#ffffff' size={16} /></div>
+          <div className='footer-location-logo'><GoLocation color='#ffffff' size={16} /></div>
           <div className='footer-info'>{footer.location}</div>
         </div>
       </div>
