@@ -8,6 +8,7 @@ import 'aos/dist/aos.css'
 const Faq = () => {
 
   const faq = useSelector(state => state.faq)
+  const language = useSelector(state => state.language)
 
   useEffect(() => {
     Aos.init({ duration: 1000 })
@@ -22,7 +23,7 @@ const Faq = () => {
         </div>
         <div className='faq-questionList'>
           {
-            faq.map((elem, index) => <Question key={index} id={elem.id} question={elem.question} answer={elem.answer} isOpen={elem.isOpen} />)
+            faq.map((elem, index) => <Question key={index} id={elem.id} question={elem[`question${language.language}`] ? elem[`question${language.language}`] : elem[`question`]} answer={elem[`answer${language.language}`] ? elem[`answer${language.language}`] : elem[`answer`]} isOpen={elem.isOpen} />)
           }
         </div>
       </div>

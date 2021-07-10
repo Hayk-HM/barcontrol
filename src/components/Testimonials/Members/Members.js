@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Members.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -6,6 +6,7 @@ import { AiFillStar } from 'react-icons/ai';
 
 
 const Members = (props) => {
+
 
   useEffect(() => {
     Aos.init({ duration: 1000 })
@@ -18,7 +19,7 @@ const Members = (props) => {
   }
 
   return (
-    <div data-aos='zoom-in' className='members-main'>
+    <div data-aos='zoom-in' className={`members-main`}>
       <div className='members-info'>
         <div className='members-img'>
           <img src={props.memberPhoto} alt='memberPhoto' className='memberPhoto' />

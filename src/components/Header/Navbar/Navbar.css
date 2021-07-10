@@ -1,3 +1,48 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.backPhoto {
+  width: 100%;
+  height: auto;
+  min-height: 700px;
+  transition: all 1s ease;
+}
+
+.photo {
+  max-height: 800px;
+}
+
+.activePhoto {
+  display: block;
+  transition: all 1s ease;
+}
+
+.notActivePhoto {
+  display: none;
+  transition: all 1s ease;
+}
+
+.header {
+  animation: header 1s;
+}
+
+@keyframes header {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 li {
   font-family: Montserrat, sans-serif;
   list-style: none;
@@ -65,12 +110,13 @@ li:hover {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 60px;
   line-height: 120%;
   color: #ffffff;
   text-transform: uppercase;
   text-align: start;
-  max-width: 496px;
+  max-width: 700px;
+  max-height: 400px;
 }
 
 .btn {
@@ -159,4 +205,36 @@ li:hover {
 
 .nav-closeMenu:hover {
   color: #247a50;
+}
+
+.slid {
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  position: relative;
+  bottom: 100px;
+}
+
+.notActive {
+  opacity: 0.5;
+  transition: all 1s ease;
+}
+
+#language {
+  background: lightblue;
+  border-radius: 20px;
+  height: 20px;
+  border: 0px;
+  cursor: pointer;
 }

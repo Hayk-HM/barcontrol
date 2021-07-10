@@ -1,9 +1,10 @@
-import { createStore } from 'redux'
-import { combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import thunkMiddleware from "redux-thunk";
 import advantageReducer from '../reducers/advantageReducer'
 import faqReducer from '../reducers/faqReducer'
 import footerReducer from '../reducers/footerReducer'
 import headerReducer from '../reducers/headerReducer'
+import languageReducer from "../reducers/languageReducer";
 import testimonialsReducer from '../reducers/testimonialsReducer'
 
 const rootReducer = combineReducers({
@@ -12,8 +13,11 @@ const rootReducer = combineReducers({
   testimonials: testimonialsReducer,
   faq: faqReducer,
   footer: footerReducer,
+  language: languageReducer,
 })
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMiddleware)))
 
 export default store
