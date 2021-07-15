@@ -21,9 +21,7 @@ const Question = (props) => {
           props.isOpen ? < AiFillMinusCircle size={29} color='#247A50' className='openClose' /> : <AiFillPlusCircle size={29} color='#247A50' className='openClose' />
         }
       </div>
-      {
-        props.isOpen ? <div className='question-answer'>{props.answer}</div> : undefined
-      }
+      <div className='question-answer'>{props.answer}</div>
     </div>
   )
 }
