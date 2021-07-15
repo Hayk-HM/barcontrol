@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import logo from '../../../image/logo.jpg'
 import './Navbar.css'
 import { Link as ScrollLink } from 'react-scroll'
 import { TiThMenu } from 'react-icons/ti'
-import { AiOutlineClose } from 'react-icons/ai'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import { languageAction } from "../../../redux/actions/language";
+import MobileMenu from '../../MobileMenu/MobileMenu'
+
+import aaa from '../../../image/Header.jpg'
 
 const Navbar = () => {
 
@@ -31,13 +33,15 @@ const Navbar = () => {
 
   return (
     <div className='main'>
+      <div className={isOpen ? `mobileMenuClose` : `mobileMenuOpen`}><MobileMenu setIsOpen={setIsOpen} /></div>
       {
         header.map((elem, index) => <> <div className={`photo ${elem.order === activeSlide ? 'activePhoto' : 'notActivePhoto'}`}>
-          <img src={`${imgUrl}${header[slideOrder].image}`} alt='headerPhoto' className={`backPhoto ${elem.order === activeSlide ? 'activePhoto' : 'notActivePhoto'}`} />
+          {/* <img src={`${imgUrl}${header[slideOrder].image}`} alt='headerPhoto' className={`backPhoto ${elem.order === activeSlide ? 'activePhoto' : 'notActivePhoto'}`} /> */}
+          <img src={aaa} alt='headerPhoto' className={`backPhoto ${elem.order === activeSlide ? 'activePhoto' : 'notActivePhoto'}`} />
         </div>
           <div className='header'>
             <div className='navbar'>
-              <div className='nav-logo'>
+              <div className={`nav-logo`}>
                 <img src={logo} alt='logo' />
               </div>
               <div className='nav-list'>
@@ -48,12 +52,14 @@ const Navbar = () => {
                   <li onClick={() => setIsOpen(true)}>Sign In</li>
                 </ul>
               </div>
-              <select name='language' id='language' onChange={handelSubmit}>
-                <option value='_en' selected>EN{getUnicodeFlagIcon('US')}</option>
-                <option value='_ru'>RU{getUnicodeFlagIcon('RU')}</option>
-                <option value='_hy'>HY{getUnicodeFlagIcon('AM')}</option>
-              </select>
-              {isOpen ? <div className='nav-menu' onClick={() => setIsOpen(false)}  ><TiThMenu size={40} /></div> : <div className='nav-closeMenu' onClick={() => setIsOpen(true)}><AiOutlineClose size={40} /></div>}
+              <div className='nav-language'>
+                <select name='language' id='language' onChange={handelSubmit}>
+                  <option value='_en' selected>EN{getUnicodeFlagIcon('US')}</option>
+                  <option value='_ru'>RU{getUnicodeFlagIcon('RU')}</option>
+                  <option value='_hy'>HY{getUnicodeFlagIcon('AM')}</option>
+                </select>
+              </div>
+              <div className='nav-menu' onClick={() => setIsOpen(false)}  ><TiThMenu size={40} /></div>
             </div>
             <div className='sub'>
               <div className='description'>

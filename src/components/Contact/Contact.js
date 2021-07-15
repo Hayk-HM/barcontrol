@@ -93,12 +93,14 @@ const Contact = () => {
                   />
                   <div className='color'> {errors.details && touched.details && errors.details} </div>
                 </div>
-                <button disabled={isSubmitting} type="submit" className='contact-button'>Request a Callback</button>
+                <div className='contact-divButton'>
+                  <button disabled={isSubmitting} type="submit" className='contact-button'>Request a Callback</button>
+                </div>
               </div>
             </form>
           )}
       </Formik>
-    </div>
+    </div >
   )
 }
 

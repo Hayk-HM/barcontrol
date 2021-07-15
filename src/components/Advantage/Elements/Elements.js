@@ -5,9 +5,9 @@ import './Elements.css'
 const Elements = (props) => {
 
   return (
-    <div>
+    <div className='main-element'>
       <div className='element-img'>
-        <img src={props.img} alt='img' className='element-photo' />
+        <img src={props.img} alt='img' className={` element-photo`} />
       </div>
       <div className='element-description'>
         {props.description}

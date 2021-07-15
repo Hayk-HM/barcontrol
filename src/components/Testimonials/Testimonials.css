@@ -5,16 +5,15 @@
 }
 
 .testimonials-list {
-  margin: 0 10px;
+  margin: 0 0;
+  width: 81vw;
+  padding: 0 0.5rem;
+  align-items: center;
 }
 
 .testimonials-members {
   display: grid;
-  grid-template-columns: 0.3fr 6.4fr 0.3fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: ". . .";
-  margin-top: 40px;
+  grid-template-columns: repeat(3, auto);
 }
 
 .testimonials-title {

@@ -14,11 +14,11 @@ const Question = (props) => {
   }
 
   return (
-    <div className={`question-main ${props.isOpen ? 'open' : null}  `} onClick={() => handleClick(props.id)}>
+    <div className={`question-main ${props.isOpen ? 'open' : 'closed'}  `} onClick={() => handleClick(props.id)}>
       <div className='question'>{props.question}</div>
       <div className='question-plus'>
         {
-          props.isOpen ? < AiFillMinusCircle size={29} color='#247A50' /> : <AiFillPlusCircle size={29} color='#247A50' />
+          props.isOpen ? < AiFillMinusCircle size={29} color='#247A50' className='openClose' /> : <AiFillPlusCircle size={29} color='#247A50' className='openClose' />
         }
       </div>
       {

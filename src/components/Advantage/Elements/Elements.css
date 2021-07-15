@@ -1,3 +1,14 @@
+.main-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.element-img {
+  height: 111px;
+}
+
 .element-description {
   width: 160px;
   font-family: Montserrat;
@@ -8,13 +19,4 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-}
-
-.element-img {
-  padding-left: 30px;
-}
-
-.element-photo {
-  max-height: 80px;
-  max-width: 80px;
 }

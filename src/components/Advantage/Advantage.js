@@ -25,7 +25,7 @@ const Advantage = () => {
       </div>
       <div data-aos='fade-left' className='advantage-services'>
         {
-          advantage.services.map((elem, index) => <Elements key={index} img={elem.img} description={elem.description} />)
+          advantage.services.map((elem, index) => <Elements key={index} index={index} img={elem.img} description={elem.description} />)
         }
       </div>
     </div>

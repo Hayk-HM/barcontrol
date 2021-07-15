@@ -75,6 +75,27 @@ li {
   cursor: pointer;
 }
 
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  margin-top: 30px;
+}
+
+.nav-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-menu:hover {
+  color: #247a50;
+}
+
 .nav-item-mobile li {
   font-family: Montserrat, sans-serif;
   font-style: normal;
@@ -89,11 +110,6 @@ li:hover {
   color: #247a50;
 }
 
-.nav-logo {
-  width: 200px;
-  z-index: 2;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -104,23 +120,13 @@ li:hover {
   background-size: cover;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px 20px 0 20px;
-}
-
-.nav-list {
-  width: 623px;
-  height: 31px;
-}
-
 .nav-item {
   display: flex;
   justify-content: space-around;
   font-family: Montserrat, sans-serif;
   text-align: center;
   color: #ffffff;
+  width: 80%;
 }
 
 .sub {
@@ -158,81 +164,6 @@ li:hover {
   border: none;
 }
 
-@media screen and (max-width: 900px) {
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 400px;
-    position: absolute;
-    top: 50px;
-    left: -200%;
-    opacity: 1;
-    transition: all 1s ease;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .nav-item-mobile {
-    background: #6668f4;
-    left: 0;
-    opacity: 1;
-    transition: all 1s ease;
-    z-index: 1;
-  }
-
-  .nav-item-mobile.noActive {
-    display: none;
-    transition: all 1s ease;
-  }
-
-  .nav-item li {
-    margin: 10px 0 20px 0;
-    text-align: end;
-    transition: all 0.5s ease;
-  }
-}
-
-.nav-menu {
-  display: none;
-  cursor: pointer;
-  width: 60px;
-}
-
-.nav-menu:hover {
-  color: #247a50;
-}
-
-@media screen and (max-width: 900px) {
-  .nav-menu {
-    display: block;
-    color: #ffffff;
-    z-index: 1;
-    margin-right: 20px;
-  }
-}
-
-.nav-closeMenu {
-  height: 40px;
-  width: 60px;
-  display: none;
-  padding: auto;
-  margin-right: 20px;
-}
-
-@media screen and (max-width: 900px) {
-  .nav-closeMenu {
-    display: block;
-    z-index: 1;
-    cursor: pointer;
-    color: #ffffff;
-  }
-}
-
-.nav-closeMenu:hover {
-  color: #247a50;
-}
-
 .slid {
   margin: 10px;
   height: 20px;
@@ -263,4 +194,112 @@ li:hover {
   height: 20px;
   border: 0px;
   cursor: pointer;
+  outline: none;
+}
+
+.nav-closeMenu {
+  height: 40px;
+  width: 60px;
+  display: none;
+  margin-left: auto;
+}
+
+.nav-closeMenu:hover {
+  color: #247a50;
+}
+
+.mobileMenuClose {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+  background-color: #e5e5e5;
+  transition: all 1s ease;
+}
+
+.mobileMenuOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+  background-color: #e5e5e5;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding-left: 39px;
+  }
+
+  .notActive {
+    top: -100%;
+    opacity: 0.5;
+    transition: all 1s ease;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: -200%;
+    left: 0;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+  .nav-item-mobile {
+    background: #e5e5e5;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    opacity: 1;
+    transition: all 1s ease;
+    z-index: 2;
+    height: 100%;
+  }
+
+  .nav-item-mobile.notActive {
+    display: none;
+    transition: all 1s ease;
+  }
+
+  .nav-item li {
+    margin: 10px 0 20px 0;
+    text-align: start;
+    transition: all 0.5s ease;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 240%;
+    color: #000000;
+  }
+
+  .nav-closeMenu {
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: auto;
+    padding-right: 50px;
+  }
+
+  .nav-menu {
+    display: block;
+    color: #ffffff;
+    margin-left: auto;
+    padding-right: 70px;
+  }
+
+  .header {
+    height: 100vh;
+  }
 }

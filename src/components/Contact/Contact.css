@@ -1,34 +1,30 @@
 .contact-main {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin: 137px auto;
-  max-width: 1460px;
   min-height: 238px;
   background: #ffffff;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
 }
 
-@media screen and (max-width: 960px) {
-  .contact-main {
-    display: flex;
-    flex-direction: column;
-  }
+.contact-divButton {
+  display: flex;
+  height: 28vh;
+  align-items: flex-end;
 }
 
 .contact-us {
   width: 190px;
   height: 39px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
-  line-height: 140%;
   text-transform: uppercase;
   color: #000000;
-  padding-left: 36px;
 }
 
 .contact-button {
@@ -46,7 +42,7 @@
 }
 
 .contact-form {
-  width: 359px;
+  min-width: 20vw;
   height: 52px;
   background: #ffffff;
   border: 1px solid #dbdbdb;
@@ -75,6 +71,37 @@ input {
   margin-top: 10px;
 }
 
-.color {
-  color: red;
+@media screen and (max-width: 1200px) {
+  .contact-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-form {
+    width: 40vw;
+  }
+
+  .contact-divButton {
+    align-items: center;
+  }
+
+  .contact-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
