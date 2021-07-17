@@ -20,13 +20,15 @@ const Testimonials = () => {
   }, [])
 
   const handelLeft = () => {
-    if (order === 0) return
-    setOrder(prev => prev - 1)
+    // if (order === 0) return
+    // setOrder(prev => prev - 1)
+    document.getElementById('testimonials-list').scrollLeft -= 100;
   }
 
   const handelRight = () => {
-    if (order === testimonials.members.length - 3) return
-    setOrder(prev => prev + 1)
+    // if (order === testimonials.members.length - 3) return
+    // setOrder(prev => prev + 1)
+    document.getElementById('testimonials-list').scrollLeft += 100;
   }
 
   return (
@@ -37,9 +39,9 @@ const Testimonials = () => {
       </div>
       <div className='testimonials-members'>
         <div className={`testimonials-left ${order === 0 ? 'disableLeft' : null}`} onClick={handelLeft}><img className='left-arrow' src={left} alt='left' /></div>
-        <div className='testimonials-list'>
+        <div className='testimonials-list' id='testimonials-list'>
           {
-            testimonials.members.map((elem, index) => <div className={index < order + 3 && index >= order ? 'slide active' : 'slide'} > <Members
+            testimonials.members.map((elem, index) => <div className={index < order + 9 && index >= order ? 'slide active' : 'slide'} > <Members
               key={index}
               memberPhoto={elem.image}
               fullName={elem.fullName}

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: "https://barcontrol-backend.nextstack.org/api/web/home"
+  baseURL: "https://barcontrol-backend.nextstack.org/api/web/home",
 })
 
 export const barApi = {

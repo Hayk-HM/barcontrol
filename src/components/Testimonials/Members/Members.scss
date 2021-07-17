@@ -3,8 +3,7 @@
   max-width: 470px;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
   margin: 0 10px;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -20,14 +19,11 @@
 }
 
 .members-info {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
-      grid-template-areas: ". .";
+  grid-template-areas: ". .";
   padding-top: 10px;
   padding-left: 10px;
   margin-top: 20px;
@@ -35,14 +31,11 @@
 }
 
 .members-description {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
-      grid-template-areas: ". .";
+  grid-template-areas: ". .";
   padding-top: 10px;
   padding-left: 10px;
 }
@@ -90,25 +83,15 @@
 }
 
 .testimonials-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   max-width: 1694px;
 }
 
 @media screen and (max-width: 1100px) {
   .testimonials-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -117,10 +100,10 @@
     max-width: calc(80vw - 10px);
   }
   .testimonials-list {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[10];
-        grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .testimonials-members {
   }
 }
-/*# sourceMappingURL=Members.css.map */

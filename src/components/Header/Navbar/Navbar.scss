@@ -5,20 +5,14 @@
 }
 
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .backPhoto {
   width: 100%;
   height: auto;
   min-height: 700px;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -28,21 +22,9 @@
 
 .activePhoto {
   opacity: 1;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-name: slide1;
-          animation-name: slide1;
-}
-
-@-webkit-keyframes slide1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation-duration: 3s;
+  animation-name: slide1;
 }
 
 @keyframes slide1 {
@@ -58,23 +40,9 @@
   position: absolute;
   opacity: 0;
   z-index: -1;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-name: slide2;
-          animation-name: slide2;
-}
-
-@-webkit-keyframes slide2 {
-  0% {
-    z-index: 1;
-    opacity: 1;
-  }
-  100% {
-    z-index: -1;
-    opacity: 0;
-  }
+  animation-duration: 3s;
+  animation-name: slide2;
 }
 
 @keyframes slide2 {
@@ -89,29 +57,15 @@
 }
 
 .header {
-  -webkit-animation: header 1s;
-          animation: header 1s;
-}
-
-@-webkit-keyframes header {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
+  animation: header 1s;
 }
 
 @keyframes header {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -122,13 +76,9 @@ li {
 }
 
 .navbar {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
   margin-top: 30px;
 }
 
@@ -161,13 +111,8 @@ li:hover {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: absolute;
   width: 100%;
   /* background-image: url("../../image/Header.jpg"); */
@@ -176,11 +121,8 @@ li:hover {
 }
 
 .nav-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   font-family: Montserrat, sans-serif;
   text-align: center;
   color: #ffffff;
@@ -188,16 +130,9 @@ li:hover {
 }
 
 .sub {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   margin-left: 10%;
   margin-top: 10%;
   margin-bottom: 236px;
@@ -222,9 +157,7 @@ li:hover {
   background: #247a50;
   font-family: Montserrat;
   font-size: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   margin-top: 10px;
   color: #ffffff;
@@ -238,20 +171,13 @@ li:hover {
   background-color: blue;
   border-radius: 50%;
   opacity: 1;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 .slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 20px auto;
   position: relative;
   bottom: 100px;
@@ -259,7 +185,6 @@ li:hover {
 
 .notActive {
   opacity: 0.5;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -291,7 +216,6 @@ li:hover {
   width: 100vw;
   z-index: 4;
   background-color: #e5e5e5;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -303,7 +227,6 @@ li:hover {
   width: 100vw;
   z-index: 4;
   background-color: #e5e5e5;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
   overflow: hidden;
 }
@@ -312,52 +235,45 @@ li:hover {
   .navbar {
     padding-left: 39px;
   }
+
   .notActive {
     top: -100%;
     opacity: 0.5;
-    -webkit-transition: all 1s ease;
     transition: all 1s ease;
   }
+
   .nav-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 100vw;
     height: 100vh;
     position: absolute;
     top: -200%;
     left: 0;
     opacity: 1;
-    -webkit-transition: all 1s ease;
     transition: all 1s ease;
   }
+
   .nav-item-mobile {
     background: #e5e5e5;
     position: absolute;
     bottom: 0;
     top: 0;
     opacity: 1;
-    -webkit-transition: all 1s ease;
     transition: all 1s ease;
     z-index: 2;
     height: 100%;
   }
+
   .nav-item-mobile.notActive {
     display: none;
-    -webkit-transition: all 1s ease;
     transition: all 1s ease;
   }
+
   .nav-item li {
     margin: 10px 0 20px 0;
     text-align: start;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     font-family: Montserrat;
     font-style: normal;
@@ -366,6 +282,7 @@ li:hover {
     line-height: 240%;
     color: #000000;
   }
+
   .nav-closeMenu {
     display: block;
     z-index: 1;
@@ -374,12 +291,14 @@ li:hover {
     margin-left: auto;
     padding-right: 50px;
   }
+
   .nav-menu {
     display: block;
     color: #ffffff;
     margin-left: auto;
     padding-right: 70px;
   }
+
   .header {
     height: 100vh;
   }
@@ -390,4 +309,3 @@ li:hover {
     font-size: 48px;
   }
 }
-/*# sourceMappingURL=Navbar.css.map */

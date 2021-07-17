@@ -1,12 +1,7 @@
 .footer-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   width: auto;
   min-height: 432px;
   background: #247a50;
@@ -72,12 +67,9 @@
 .footer-email,
 .footer-domain,
 .footer-location {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   line-height: 180%;
 }
-
 .footer-info {
   font-family: Montserrat, sans-serif;
   font-style: normal;
@@ -96,13 +88,8 @@
 .footer-information,
 .footer-aboutUs,
 .footer-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .footer-logo {
@@ -124,16 +111,10 @@ a {
 
 @media screen and (max-width: 900px) {
   .footer-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .footer-contact {
     margin-top: 10px;
   }
 }
-/*# sourceMappingURL=Footer.css.map */

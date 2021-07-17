@@ -1,10 +1,6 @@
 .mobileMenu-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .mobileMenu-logo {
@@ -33,4 +29,3 @@
 .mobileMenu-button {
   margin: 100px 20px;
 }
-/*# sourceMappingURL=mobileMenu.css.map */
