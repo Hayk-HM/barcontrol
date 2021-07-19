@@ -109,9 +109,13 @@
   margin-right: 20px;
 }
 
+.footer-information-description {
+  width: 140px;
+}
+
 .footer-information-description,
 .footer-aboutUs-description {
-  margin: auto 0 auto 0;
+  margin: auto 0;
 }
 
 .footer-social-description {
@@ -122,7 +126,7 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .footer-main {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 900px) {
   .slide {
-    min-width: 100vw;
+    min-width: 100%;
   }
   .testimonials-list::-webkit-scrollbar {
     width: 2px;

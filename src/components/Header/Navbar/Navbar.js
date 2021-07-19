@@ -71,7 +71,7 @@ const Navbar = () => {
                   }
                 </div>
               </div>
-              <div>
+              <div className='btnDiv'>
                 <ScrollLink to='contact' smooth={true} duration={1000}><button className='btn'>Get Started</button></ScrollLink>
               </div>
             </div>

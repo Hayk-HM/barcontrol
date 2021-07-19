@@ -19,16 +19,7 @@
   width: 80%;
 }
 
-.contact-divButton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 28vh;
-}
-
 .contact-us {
-  width: 190px;
-  height: 39px;
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -36,38 +27,6 @@
   text-transform: uppercase;
   color: #000000;
   margin-top: 10px;
-}
-
-.contact-button {
-  width: 228px;
-  height: 52px;
-  background: #247a50;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 140%;
-  color: #ffffff;
-  margin: 10px 50px 10px 0;
-  border: none;
-  margin-top: 130px;
-}
-
-.contact-form {
-  min-width: 20vw;
-  height: 52px;
-  background: #ffffff;
-  border: 1px solid #dbdbdb;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 140%;
-  text-align: left;
-  color: #000000;
-  padding: 15px;
 }
 
 .contact-left {
@@ -90,6 +49,37 @@
           flex-direction: column;
 }
 
+.contact-button {
+  width: 228px;
+  height: 52px;
+  background: #247a50;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+  border: none;
+  margin-top: 70px;
+}
+
+.contact-form {
+  min-width: 20vw;
+  height: 52px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: left;
+  color: #000000;
+  padding: 15px;
+}
+
 input {
   margin-top: 10px;
 }
@@ -103,6 +93,9 @@ input {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .contact-button {
+    margin: 20px 0;
   }
   .contact-left {
     display: -webkit-box;
@@ -130,11 +123,6 @@ input {
   }
   .contact-form {
     width: 40vw;
-  }
-  .contact-divButton {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .contact-button {
     margin-left: auto;

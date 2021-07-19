@@ -76,6 +76,7 @@ li {
 }
 
 .navbar {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, auto);
   align-items: center;
@@ -94,6 +95,22 @@ li {
 
 .nav-menu:hover {
   color: #247a50;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  right: 200px;
+  width: 45%;
+}
+
+.nav-language {
+  position: absolute;
+  top: auto;
+  right: 100px;
+  align-items: center;
 }
 
 .nav-item-mobile li {
@@ -232,6 +249,10 @@ li:hover {
 }
 
 @media screen and (max-width: 900px) {
+  .nav-language {
+    right: 150px;
+  }
+
   .navbar {
     padding-left: 39px;
   }
@@ -293,14 +314,12 @@ li:hover {
   }
 
   .nav-menu {
+    position: absolute;
+    right: 1%;
     display: block;
     color: #ffffff;
     margin-left: auto;
     padding-right: 70px;
-  }
-
-  .header {
-    height: 100vh;
   }
 }
 

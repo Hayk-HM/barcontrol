@@ -41,7 +41,7 @@ const Testimonials = () => {
         <div className={`testimonials-left ${order === 0 ? 'disableLeft' : null}`} onClick={handelLeft}><img className='left-arrow' src={left} alt='left' /></div>
         <div className='testimonials-list' id='testimonials-list'>
           {
-            testimonials.members.map((elem, index) => <div className={index < order + 9 && index >= order ? 'slide active' : 'slide'} > <Members
+            testimonials.members.map((elem, index) => <div className={index < order + 9 && index >= order ? 'slide active' : 'slide active'} > <Members
               key={index}
               memberPhoto={elem.image}
               fullName={elem.fullName}
