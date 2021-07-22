@@ -25,6 +25,7 @@
   margin-top: 10px;
   color: #ffffff;
   border: none;
+  cursor: pointer;
 }
 
 .advantage-description {
@@ -42,7 +43,7 @@
 }
 
 .advantageTitle {
-  width: 408px;
+  max-width: 408px;
   height: 155px;
   font-family: Montserrat;
   font-style: normal;
@@ -62,7 +63,7 @@
 }
 
 .advantageDescription {
-  width: 389px;
+  max-width: 389px;
   height: 118px;
   font-family: Montserrat;
   font-style: normal;
@@ -79,7 +80,7 @@
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
+  gap: 5px 5px;
       grid-template-areas: ". . ." ". . .";
   margin-bottom: auto;
   width: 50%;
@@ -125,6 +126,37 @@
     gap: 0px 0px;
         grid-template-areas: ". ." ". ." ". .";
     margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .advantage-description {
+    width: 89%;
+    overflow: hidden;
+  }
+  .advantageTitle {
+    width: 98%;
+    font-size: 21px;
+    margin-left: 20px;
+    overflow: hidden;
+  }
+  .br {
+    display: none;
+  }
+  .advantageDescription {
+    min-height: 150px;
+    margin-top: 0;
+    text-align: center;
+    overflow: hidden;
+    font-size: 16px;
+  }
+  .advantage-btn {
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  .advantage-btnDiv {
+    overflow: hidden;
+    height: 100px;
   }
 }
 /*# sourceMappingURL=Advantage.css.map */

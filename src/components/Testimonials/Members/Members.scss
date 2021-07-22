@@ -13,6 +13,7 @@
   width: 88px;
   height: 88px;
   margin-right: 10px;
+  overflow: hidden;
 }
 
 .memberPhoto {
@@ -76,6 +77,7 @@
   color: #211f1f;
   margin: 0 auto;
   padding-bottom: 20px;
+  margin-right: 5px;
 }
 
 .members-right {
@@ -104,7 +106,10 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
   }
-
-  .testimonials-members {
+}
+@media screen and (max-width: 499px) {
+  .members-info {
+    display: flex;
+    flex-direction: column;
   }
 }

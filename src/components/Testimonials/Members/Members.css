@@ -14,6 +14,7 @@
   width: 88px;
   height: 88px;
   margin-right: 10px;
+  overflow: hidden;
 }
 
 .memberPhoto {
@@ -83,6 +84,7 @@
   color: #211f1f;
   margin: 0 auto;
   padding-bottom: 20px;
+  margin-right: 5px;
 }
 
 .members-right {
@@ -122,6 +124,18 @@
     display: grid;
     -ms-grid-columns: (1fr)[10];
         grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .members-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=Members.css.map */

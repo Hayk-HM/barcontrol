@@ -19,7 +19,7 @@ const Members = (props) => {
   }
 
   return (
-    <div data-aos='zoom-in' className={`members-main`}>
+    <div data-aos='zoom-in' className={`members-main`} id={props.id} >
       <div className='members-info'>
         <div className='members-img'>
           <img src={props.memberPhoto} alt='memberPhoto' className='memberPhoto' />

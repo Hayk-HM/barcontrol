@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import Aos from 'aos'
+import { Link as ScrollLink } from 'react-scroll'
 import 'aos/dist/aos.css'
 import './Advantage.css'
 import Elements from './Elements/Elements'
@@ -19,8 +20,8 @@ const Advantage = () => {
         <div data-aos='fade-up' className='advantageTitle'>{advantage.advantageTitle}</div>
         <div data-aos='fade-up' className='br'></div>
         <div data-aos='fade-up' className='advantageDescription'>{advantage.advantageDescription}</div>
-        <div>
-          <button data-aos='fade-up' className='advantage-btn'>Get started</button>
+        <div className='advantage-btnDiv'>
+          <ScrollLink to='contact' smooth={true} duration={1000}><button data-aos='fade-up' className='advantage-btn'>Get started</button></ScrollLink>
         </div>
       </div>
       <div data-aos='fade-left' className='advantage-services'>

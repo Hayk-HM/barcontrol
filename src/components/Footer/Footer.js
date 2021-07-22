@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { GoMail, AiOutlineGlobal, GoLocation, FaPhoneAlt, FaFacebook, IoLogoInstagram, AiFillTwitterCircle } from 'react-icons/all'
+import { GoMail, AiOutlineGlobal, GoLocation, FaPhoneAlt, FaFacebookF, IoLogoInstagram, AiFillTwitterCircle } from 'react-icons/all'
 
 import './Footer.css'
 
@@ -40,7 +40,7 @@ const Footer = () => {
         <div className='footer-social-title'>Find Us on social media</div>
         <div className='footer-social-description footer-info'>
           {
-            footer.social.map((elem, index) => (elem === 'facebook') ? <a key={index} href='https://www.facebook.com/'><FaFacebook className='footer-logo' color='#ffffff' size={32} /> </a> : (elem === 'instagram') ? <a href='https://www.instagram.com/' > <IoLogoInstagram className='footer-logo' size={37} color='#ffffff' /></a> : (elem === 'twitter') ? <a href='https://www.twitter.com/'><AiFillTwitterCircle className='footer-logo' size={37} color='#ffffff' /></a> : null)
+            footer.social.map((elem, index) => (elem === 'facebook') ? <a key={index} href='https://www.facebook.com/'><div className='facebookIcon'><FaFacebookF className='footer-logo' color='#247A50' size={22} /></div></a> : (elem === 'instagram') ? <a href='https://www.instagram.com/' ><div className='instagramIcon'><IoLogoInstagram className='footer-logo' size={35} color='#247A50' /></div> </a> : (elem === 'twitter') ? <a href='https://www.twitter.com/'><AiFillTwitterCircle className='footer-logo' size={47} color='#ffffff' /></a> : null)
           }
         </div>
       </div>

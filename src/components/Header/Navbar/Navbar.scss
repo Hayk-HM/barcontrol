@@ -104,6 +104,8 @@ li {
   position: absolute;
   right: 200px;
   width: 45%;
+  position: absolute;
+  left: 26%;
 }
 
 .nav-language {
@@ -159,12 +161,12 @@ li:hover {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 4vw;
   line-height: 120%;
   color: #ffffff;
   text-transform: uppercase;
   text-align: start;
-  max-width: 700px;
+  max-width: 50%;
   max-height: 400px;
 }
 
@@ -179,6 +181,7 @@ li:hover {
   margin-top: 10px;
   color: #ffffff;
   border: none;
+  cursor: pointer;
 }
 
 .slid {
@@ -227,7 +230,7 @@ li:hover {
 
 .mobileMenuClose {
   position: absolute;
-  top: -100%;
+  top: -150%;
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -325,6 +328,35 @@ li:hover {
 
 @media screen and (max-width: 600px) {
   .description {
-    font-size: 48px;
+    font-size: 6vw;
+    max-width: 70%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .headerPhoto {
+    z-index: 4;
+  }
+  .nav-language {
+    right: 115px;
+  }
+
+  .nav-menu {
+    padding-right: 32px;
+  }
+
+  .nav-logo {
+    margin-left: 0px;
+  }
+
+  .sub {
+    margin-top: 40%;
+  }
+
+  .description {
+    font-size: 36px;
+    max-width: 90%;
+    overflow: hidden;
   }
 }

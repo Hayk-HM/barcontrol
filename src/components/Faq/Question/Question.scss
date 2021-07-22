@@ -46,11 +46,30 @@
   height: 70px;
   display: flex;
   align-items: center;
+  width: 110%;
 }
 
 .question-plus {
-  width: 29px;
-  height: 29px;
-  margin-left: 31px;
-  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen and(max-width: 1300px) {
+  .question {
+    font-size: 17px;
+  }
+}
+
+@media screen and(max-width: 499px) {
+  .question {
+    width: 100%;
+    font-size: 14px;
+  }
+  .question-main {
+    margin-right: 0;
+  }
+  .question-answer {
+    font-size: 12px;
+  }
 }

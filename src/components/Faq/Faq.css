@@ -63,4 +63,17 @@
             align-items: center;
   }
 }
+
+@media screen and (max-width: 499px) {
+  .faq {
+    overflow: hidden;
+  }
+  .faq-title {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+  .faq-questionList {
+    padding-right: 5px;
+  }
+}
 /*# sourceMappingURL=Faq.css.map */
