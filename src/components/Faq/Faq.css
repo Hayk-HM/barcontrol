@@ -65,7 +65,7 @@
 }
 
 @media screen and (max-width: 499px) {
-  .faq {
+  #faq {
     overflow: hidden;
   }
   .faq-title {

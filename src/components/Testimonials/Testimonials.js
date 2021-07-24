@@ -1,22 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useLayoutEffect } from 'react'
 import { useSelector } from 'react-redux'
 import Members from './Members/Members'
 import left from '../../image/left.png'
 import right from '../../image/right.png'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import Slider from "react-slick";
 
 import './Testimonials.css'
 
 const Testimonials = () => {
 
   const testimonials = useSelector(state => state.testimonials)
-  const [order, setOrder] = useState(0)
-  const [scrollElement, setScrollElement] = useState(null)
-  const [scrollThumbWidth, setScrollThumbWidth] = useState(null)
-  const [scrollTrackWidth, setScrollTrackWidth] = useState(null)
-  const swiperScrollbarRef = useRef()
-  const swiperScrollbarDragRef = useRef()
 
   //style="transform: translate3d(-480px, 0px, 0px); transition-duration: 0ms;"
 
@@ -24,85 +19,71 @@ const Testimonials = () => {
     Aos.init({ duration: 1000 })
   }, [])
 
-  const handelLeft = () => {
-    if (order === 0) return
-    setOrder(pre => pre - 1)
-  }
-
-  const handelRight = () => {
-    if (order === testimonials.members.length - 1) return
-    setOrder(pre => pre + 1)
-  }
-
-  useEffect(() => {
-    const elemWidth = document.querySelectorAll('.members-main')[0].offsetWidth || null
-    const oneElemWidth = elemWidth / testimonials.members.length
-    setScrollElement(oneElemWidth)
-
-    const scrollTrackWidth = document.querySelectorAll('.swiper-scrollbar')[0].offsetWidth || null
-    setScrollTrackWidth(scrollTrackWidth)
-    const oneScrollWidth = scrollTrackWidth / (testimonials.members.length)
-    setScrollThumbWidth(oneScrollWidth)
-  }, [document.body.offsetWidth])
 
 
-  const handelScroll = (e) => {
-    // document.querySelector('.swiper-scrollbar').addEventListener("click", (event) => {
-    //   const page = Math.floor(event.offsetX / scrollThumbWidth)
-    //   setOrder(page)
-    //   console.log('offsetX', event.offsetX);
-    //   console.log('order', order);
-    //   console.log('scrollThumbWidth', scrollThumbWidth);
-    //   console.log('scrollTrackWidth', scrollTrackWidth);
-    //   console.log('page', page);
-    // });
-    const pageNumber = (Math.floor(e.clientX / swiperScrollbarDragRef.current.clientWidth));
-    if (pageNumber > testimonials.members.length - 1) {
-      setOrder(testimonials.members.length - 1)
+  const [slideIndex, setSlideIndex] = useState(0)
+  const [updateCount, setUpdateCount] = useState(0)
+  const [mySlideToShow, setMySlideToShow] = useState(3)
+  const [screen, setScreen] = useState(window.innerWidth)
+  const slider = useRef()
+
+  useLayoutEffect(() => {
+
+    if (screen < 900) {
+      setMySlideToShow(1)
+    } else if (screen < 1100) {
+      setMySlideToShow(2)
     } else {
-      setOrder(pageNumber);
+      setMySlideToShow(3)
     }
-  }
+  }, [window.innerWidth])
 
+  // const resize = () => {
+  //   if (window.innerWidth = 900) {
+  //     setMySlideToShow(1)
+  //   } else if (window.innerWidth = 1100) {
+  //     setMySlideToShow(2)
+  //   } else {
+  //     setMySlideToShow(3)
+  //   }
+  // }
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: mySlideToShow,
+    slidesToScroll: 1,
+    afterChange: () => setUpdateCount(pre => pre + 1),
+    beforeChange: (current, next) => setSlideIndex(next),
+  };
   return (
-    <div className='testimonials-main' id="testimonials">
-      <div>
+
+    <div className='ttt'>
+      <div className='testimonials-main' id="testimonials">
         <div data-aos='slide-up' className='testimonials-title'>{testimonials.testimonialsTitle}</div>
         <div data-aos='slide-up' className='testimonials-br'></div>
       </div>
-      <div className='testimonials-members'>
-
-        <div className={`testimonials-left ${order === 0 ? 'disableLeft' : null}`} >
-          <img onClick={handelLeft} id='left-arrow' className='left-arrow' src={left} alt='left' />
-        </div>
-
-        <div className={`testimonials-list container x mandatory-scroll-snapping`} dir="ltr" id='testimonials-list'>
-          {
-            testimonials.members.map((elem, index) => <div style={{ transform: `translate3d(${order * -(scrollElement * testimonials.members.length + 20)}px, 0px, 0px)`, transitionDuration: '1000ms' }} id='slide' className={index < order + 9 && index >= order ? 'slide active' : 'slide active'} > <Members
-              key={index}
-              memberPhoto={elem.image}
-              fullName={elem.fullName}
-              location={elem.location}
-              rating={elem.rating}
-              description={elem.description}
-            /> </div>)
-          }
-        </div>
-        <div className={`testimonials-right ${order === testimonials.members.length - 1 ? 'disableLeft' : null}`}>
-          <img onClick={handelRight} id='right-arrow' className='right-arrow' src={right} alt='right' />
-        </div>
-      </div>
-      <div className='swiper-scrollbar' ref={swiperScrollbarRef} onClick={(e) => handelScroll(e)}>
-        <div
-          ref={swiperScrollbarDragRef}
-          className='swiper-scrollbar-drag'
-          style={{
-            width: scrollThumbWidth || "15vw",
-            transform: `translate3d(${(order) * (scrollThumbWidth)}px, 0px, 0px)`,
-            transitionDuration: '1000ms'
-          }}
-        ></div>
-      </div>
+      <Slider ref={slider} {...settings} className='testimonials-main-slider'>
+        {
+          testimonials.members.map((elem, index) => <Members
+            key={index}
+            memberPhoto={elem.image}
+            fullName={elem.fullName}
+            location={elem.location}
+            rating={elem.rating}
+            description={elem.description}
+          />)
+        }
+      </Slider>
+      <input
+        className='sliderInput'
+        onChange={e => slider.current.slickGoTo(e.target.value)}
+        value={slideIndex}
+        type="range"
+        min={0}
+        max={testimonials.members.length - 1}
+      />
     </div>
   )
 }
