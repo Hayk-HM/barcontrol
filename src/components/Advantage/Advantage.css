@@ -126,6 +126,7 @@
     gap: 0px 0px;
         grid-template-areas: ". ." ". ." ". .";
     margin-top: 50px;
+    overflow: hidden;
   }
 }
 

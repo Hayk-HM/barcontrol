@@ -128,6 +128,9 @@
 }
 
 @media screen and (max-width: 499px) {
+  .members-main {
+    max-width: calc(80vw - 20px);
+  }
   .members-info {
     display: -webkit-box;
     display: -ms-flexbox;

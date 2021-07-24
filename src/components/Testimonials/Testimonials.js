@@ -30,7 +30,7 @@ const Testimonials = () => {
   }
 
   const handelRight = () => {
-    if (order === testimonials.members.length - 3) return
+    if (order === testimonials.members.length - 1) return
     setOrder(pre => pre + 1)
   }
 
@@ -41,7 +41,7 @@ const Testimonials = () => {
 
     const scrollTrackWidth = document.querySelectorAll('.swiper-scrollbar')[0].offsetWidth || null
     setScrollTrackWidth(scrollTrackWidth)
-    const oneScrollWidth = scrollTrackWidth / (testimonials.members.length - 2)
+    const oneScrollWidth = scrollTrackWidth / (testimonials.members.length)
     setScrollThumbWidth(oneScrollWidth)
   }, [document.body.offsetWidth])
 
@@ -57,8 +57,8 @@ const Testimonials = () => {
     //   console.log('page', page);
     // });
     const pageNumber = (Math.floor(e.clientX / swiperScrollbarDragRef.current.clientWidth));
-    if (pageNumber > testimonials.members.length - 3) {
-      setOrder(testimonials.members.length - 3)
+    if (pageNumber > testimonials.members.length - 1) {
+      setOrder(testimonials.members.length - 1)
     } else {
       setOrder(pageNumber);
     }
@@ -88,7 +88,7 @@ const Testimonials = () => {
             /> </div>)
           }
         </div>
-        <div className={`testimonials-right ${order === testimonials.members.length - 3 ? 'disableLeft' : null}`}>
+        <div className={`testimonials-right ${order === testimonials.members.length - 1 ? 'disableLeft' : null}`}>
           <img onClick={handelRight} id='right-arrow' className='right-arrow' src={right} alt='right' />
         </div>
       </div>
@@ -97,7 +97,7 @@ const Testimonials = () => {
           ref={swiperScrollbarDragRef}
           className='swiper-scrollbar-drag'
           style={{
-            width: scrollThumbWidth,
+            width: scrollThumbWidth || "15vw",
             transform: `translate3d(${(order) * (scrollThumbWidth)}px, 0px, 0px)`,
             transitionDuration: '1000ms'
           }}
