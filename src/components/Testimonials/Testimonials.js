@@ -9,34 +9,44 @@ import Slider from "react-slick";
 
 import './Testimonials.css'
 
+
+
 const Testimonials = () => {
 
   const testimonials = useSelector(state => state.testimonials)
-
-  //style="transform: translate3d(-480px, 0px, 0px); transition-duration: 0ms;"
 
   useEffect(() => {
     Aos.init({ duration: 1000 })
   }, [])
 
-
-
   const [slideIndex, setSlideIndex] = useState(0)
   const [updateCount, setUpdateCount] = useState(0)
   const [mySlideToShow, setMySlideToShow] = useState(3)
-  const [screen, setScreen] = useState(window.innerWidth)
   const slider = useRef()
+  const [width, height] = useWindowSize();
+
+  function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
 
   useLayoutEffect(() => {
-
-    if (screen < 900) {
+    if (width < 800) {
       setMySlideToShow(1)
-    } else if (screen < 1100) {
+    } else if (width < 1100) {
       setMySlideToShow(2)
     } else {
       setMySlideToShow(3)
     }
-  }, [window.innerWidth])
+  }, [width])
 
   // const resize = () => {
   //   if (window.innerWidth = 900) {
@@ -59,12 +69,12 @@ const Testimonials = () => {
   };
   return (
 
-    <div className='ttt'>
+    <div>
       <div className='testimonials-main' id="testimonials">
         <div data-aos='slide-up' className='testimonials-title'>{testimonials.testimonialsTitle}</div>
         <div data-aos='slide-up' className='testimonials-br'></div>
       </div>
-      <Slider ref={slider} {...settings} className='testimonials-main-slider'>
+      <Slider ref={slider} {...settings} className='testimonials-slider-main'>
         {
           testimonials.members.map((elem, index) => <Members
             key={index}

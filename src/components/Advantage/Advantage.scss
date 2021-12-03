@@ -18,6 +18,7 @@
   color: #ffffff;
   border: none;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .advantage-description {
@@ -83,6 +84,7 @@
 
   .advantage-description {
     margin: auto;
+    overflow: hidden;
   }
 
   .advantage-services {

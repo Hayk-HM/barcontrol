@@ -243,6 +243,10 @@ li:hover {
   overflow: hidden;
 }
 
+.description > div {
+  overflow: hidden;
+}
+
 .btn {
   width: 274px;
   height: 52px;

@@ -3,7 +3,7 @@ input[type="range"] {
 }
 
 .slick-slider {
-  width: 88vw;
+  width: 93vw;
   margin: auto;
 }
 
@@ -12,8 +12,12 @@ input[type="range"] {
 }
 
 .slick-arrow {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
+}
+
+.slick-arrow.slick-disabled {
+  opacity: 0.5;
 }
 
 .slick-arrow::before {
@@ -92,6 +96,7 @@ input[type="range"] {
   line-height: 140%;
   text-transform: uppercase;
   color: #000000;
+  overflow: hidden;
 }
 
 .testimonials-br {
@@ -156,7 +161,7 @@ input[type="range"] {
     height: 26px;
     -webkit-appearance: none;
     margin: 10px auto;
-    width: 80%;
+    width: 78%;
   }
   input[type="range"]:focus {
     outline: none;
@@ -264,6 +269,10 @@ input[type="range"] {
 }
 
 @media screen and (max-width: 499px) {
+  .slick-arrow {
+    width: 20px;
+    height: 20px;
+  }
   .slick-slider {
     width: 100%;
   }
